@@ -1,0 +1,115 @@
+[debug] [2019-10-14T13:30:54.823Z] ----------------------------------------------------------------------
+[debug] [2019-10-14T13:30:54.825Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-10-14T13:30:54.826Z] CLI Version:   7.3.2
+[debug] [2019-10-14T13:30:54.826Z] Platform:      darwin
+[debug] [2019-10-14T13:30:54.826Z] Node Version:  v10.16.3
+[debug] [2019-10-14T13:30:54.828Z] Time:          Mon Oct 14 2019 14:30:54 GMT+0100 (West Africa Standard Time)
+[debug] [2019-10-14T13:30:54.828Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-14T13:30:54.843Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-14T13:30:54.843Z] > authorizing via signed-in user
+[debug] [2019-10-14T13:30:54.843Z] [iam] checking project servedotng for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-10-14T13:30:54.846Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/servedotng:testIamPermissions  
+
+[debug] [2019-10-14T13:32:10.836Z] Error: connect ETIMEDOUT 216.58.223.202:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.223.202:443
+[debug] [2019-10-14T13:32:18.774Z] ----------------------------------------------------------------------
+[debug] [2019-10-14T13:32:18.777Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-10-14T13:32:18.777Z] CLI Version:   7.3.2
+[debug] [2019-10-14T13:32:18.777Z] Platform:      darwin
+[debug] [2019-10-14T13:32:18.777Z] Node Version:  v10.16.3
+[debug] [2019-10-14T13:32:18.778Z] Time:          Mon Oct 14 2019 14:32:18 GMT+0100 (West Africa Standard Time)
+[debug] [2019-10-14T13:32:18.778Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-14T13:32:18.792Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-14T13:32:18.793Z] > authorizing via signed-in user
+[debug] [2019-10-14T13:32:18.793Z] [iam] checking project servedotng for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-10-14T13:32:18.795Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/servedotng:testIamPermissions  
+
+[debug] [2019-10-14T13:32:20.619Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-14T13:32:20.622Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/servedotng  
+ 
+[debug] [2019-10-14T13:32:21.520Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'servedotng'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-10-14T13:32:21.525Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/servedotng/versions  
+
+[debug] [2019-10-14T13:32:23.978Z] <<< HTTP RESPONSE 200
+[info] i  hosting[servedotng]: beginning deploy...
+[info] i  hosting[servedotng]: found 303 files in public
+[debug] [2019-10-14T13:32:24.093Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-10-14T13:32:25.202Z] [hosting] hash cache [cHVibGlj] stored for 303 files
+[debug] [2019-10-14T13:32:25.203Z] [hosting][hash queue][FINAL]
+[debug] [2019-10-14T13:32:25.203Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/servedotng/versions/44fc8cc959ad194a:populateFiles  
+ <request body omitted>
+[debug] [2019-10-14T13:32:30.110Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-14T13:32:30.113Z] [hosting][populate queue][FINAL]
+[debug] [2019-10-14T13:32:30.113Z] [hosting] uploads queued: 1
+[debug] [2019-10-14T13:32:32.989Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[servedotng]: file upload complete
+[debug] [2019-10-14T13:32:32.990Z] [hosting] deploy completed after 9011ms
+[debug] [2019-10-14T13:32:33.554Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "servedotng"
+    },
+    "site": "servedotng",
+    "version": "sites/servedotng/versions/44fc8cc959ad194a"
+  }
+]
+[info] i  hosting[servedotng]: finalizing version...
+[debug] [2019-10-14T13:32:33.555Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/servedotng/versions/44fc8cc959ad194a?updateMask=status  
+
+[debug] [2019-10-14T13:32:35.343Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-14T13:32:35.344Z] [hosting] finalized version for servedotng:
+[info] ✔  hosting[servedotng]: version finalized
+[info] i  hosting[servedotng]: releasing new version...
+[debug] [2019-10-14T13:32:35.345Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/servedotng/releases?version_name=sites/servedotng/versions/44fc8cc959ad194a  
+
+[debug] [2019-10-14T13:33:50.890Z] Error: connect ETIMEDOUT 216.58.223.202:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.223.202:443
+[debug] [2019-10-14T13:34:12.426Z] ----------------------------------------------------------------------
+[debug] [2019-10-14T13:34:12.428Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-10-14T13:34:12.429Z] CLI Version:   7.3.2
+[debug] [2019-10-14T13:34:12.429Z] Platform:      darwin
+[debug] [2019-10-14T13:34:12.429Z] Node Version:  v10.16.3
+[debug] [2019-10-14T13:34:12.431Z] Time:          Mon Oct 14 2019 14:34:12 GMT+0100 (West Africa Standard Time)
+[debug] [2019-10-14T13:34:12.431Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-14T13:34:12.446Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-14T13:34:12.446Z] > authorizing via signed-in user
+[debug] [2019-10-14T13:34:12.446Z] [iam] checking project servedotng for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-10-14T13:34:12.448Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/servedotng:testIamPermissions  
+
+[debug] [2019-10-14T13:34:14.368Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-14T13:34:14.371Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/servedotng  
+ 
+[debug] [2019-10-14T13:34:15.066Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'servedotng'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-10-14T13:34:15.071Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/servedotng/versions  
+
+[debug] [2019-10-14T13:34:40.073Z] Error: connect ETIMEDOUT 216.58.223.202:443
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1106:14)
+[error] 
+[error] Error: Server Error. connect ETIMEDOUT 216.58.223.202:443
